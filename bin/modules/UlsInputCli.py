@@ -264,7 +264,7 @@ class UlsInputCli:
                 print("stop2")
                 self.proc_output = self.cli_proc.stdout
                 print("stop3")
-                os.set_blocking(self.proc_output.fileno(), False)
+                #os.set_blocking(self.proc_output.fileno(), False)
                 print("stop4")
                 time.sleep(1)
                 print("stop5")
