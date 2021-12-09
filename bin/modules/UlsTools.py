@@ -60,8 +60,7 @@ def uls_version(root_path):
         try:
             version_proc = subprocess.Popen([uls_config.bin_python, cli_bin, "--edgerc", edgerc_mock_file, "version"],
                                             stdout=subprocess.PIPE,
-                                            stderr=subprocess.PIPE,
-                                            shell=True)
+                                            stderr=subprocess.PIPE)
             my_cli_version = version_proc.communicate()[0].decode().strip('\n')
             version_proc.terminate()
             if my_cli_version:

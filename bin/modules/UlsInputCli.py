@@ -259,10 +259,15 @@ class UlsInputCli:
                                                  stderr=subprocess.PIPE)
                 aka_log.log.info(f"{self.name} - started PID[{self.cli_proc.pid}]: "
                                  f"{' '.join(cli_command)}")
+                print("stop1")
                 self.proc = self.cli_proc
+                print("stop2")
                 self.proc_output = self.cli_proc.stdout
+                print("stop3")
                 os.set_blocking(self.proc_output.fileno(), False)
+                print("stop4")
                 time.sleep(1)
+                print("stop5")
 
                 if not self.check_proc():
                     #self.rerun_counter += 1
